@@ -1,0 +1,127 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2025-05-19T16:51:33.551669573-04:00",
+            "magic": "f5af9aea0eb5ca1b68221c59920e8a630d5acc8aa6e4e0b98c4cd6eb8cdc40e8",
+            "version": "v3.170.0"
+        },
+        "secrets_providers": {
+            "type": "cloud",
+            "state": {
+                "url": "awskms://alias/test-pulumi-cfndev?region=us-west-2",
+                "encryptedkey": "AQICAHiRT11ElLB31E0tmlxbtC3oxa4xZOUPnig5R+n4TmAJmgEvaTk1fi2H5fQnWzD8is7EAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMF4pSgpjvDXDSE3PEAgEQgDvqZcD3kYn4J04gquL/6G5d4AycoAyYH6Bbh0IKStzifSHMfXzc/pLxEnBnCkbEiq1IZHKkhKQ6xiQK1g=="
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:cfndev::pulumi-proj-250519-start::pulumi:pulumi:Stack::pulumi-proj-250519-start-cfndev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "bucket_name": "my-bucket-82068c6"
+                },
+                "created": "2025-05-19T18:49:57.146677318Z",
+                "modified": "2025-05-19T18:49:57.146677318Z",
+                "sourcePosition": "project:///venv/lib/python3.11/site-packages/pulumi/runtime/stack.py#140"
+            },
+            {
+                "urn": "urn:pulumi:cfndev::pulumi-proj-250519-start::pulumi:providers:aws::default_6_80_0",
+                "custom": true,
+                "id": "c638f910-6aa1-48b3-a498-29151b688e1c",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-west-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.80.0"
+                },
+                "outputs": {
+                    "region": "us-west-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.80.0"
+                },
+                "created": "2025-05-19T18:49:59.230572253Z",
+                "modified": "2025-05-19T18:49:59.230572253Z"
+            },
+            {
+                "urn": "urn:pulumi:cfndev::pulumi-proj-250519-start::aws:s3/bucketV2:BucketV2::my-bucket",
+                "custom": true,
+                "id": "my-bucket-82068c6",
+                "type": "aws:s3/bucketV2:BucketV2",
+                "inputs": {
+                    "__defaults": [
+                        "bucket",
+                        "forceDestroy"
+                    ],
+                    "bucket": "my-bucket-82068c6",
+                    "forceDestroy": false
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::my-bucket-82068c6",
+                    "bucket": "my-bucket-82068c6",
+                    "bucketDomainName": "my-bucket-82068c6.s3.amazonaws.com",
+                    "bucketPrefix": "",
+                    "bucketRegionalDomainName": "my-bucket-82068c6.s3.us-west-2.amazonaws.com",
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "4290353e2e2770ce062cfbde970e0ab6eb7bcf500835bd00ba5fd03b7f806021",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": "Z3BJ6K6RIION7M",
+                    "id": "my-bucket-82068c6",
+                    "lifecycleRules": [],
+                    "loggings": [],
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": false,
+                    "policy": "",
+                    "region": "us-west-2",
+                    "replicationConfigurations": [],
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfigurations": [
+                        {
+                            "rules": [
+                                {
+                                    "applyServerSideEncryptionByDefaults": [
+                                        {
+                                            "kmsMasterKeyId": "",
+                                            "sseAlgorithm": "AES256"
+                                        }
+                                    ],
+                                    "bucketKeyEnabled": false
+                                }
+                            ]
+                        }
+                    ],
+                    "versionings": [
+                        {
+                            "enabled": false,
+                            "mfaDelete": false
+                        }
+                    ],
+                    "websiteDomain": null,
+                    "websiteEndpoint": null,
+                    "websites": []
+                },
+                "parent": "urn:pulumi:cfndev::pulumi-proj-250519-start::pulumi:pulumi:Stack::pulumi-proj-250519-start-cfndev",
+                "provider": "urn:pulumi:cfndev::pulumi-proj-250519-start::pulumi:providers:aws::default_6_80_0::c638f910-6aa1-48b3-a498-29151b688e1c",
+                "created": "2025-05-19T18:50:02.688764983Z",
+                "modified": "2025-05-19T18:50:02.688764983Z",
+                "sourcePosition": "project:///__main__.py#7"
+            }
+        ],
+        "metadata": {}
+    }
+}

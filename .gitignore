@@ -1,0 +1,3 @@
+*.pyc
+venv/
+.PULUMI_CONFIG_PASSPHRASE_FILE

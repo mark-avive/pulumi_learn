@@ -1,0 +1,4 @@
+secretsprovider: awskms://alias/test-pulumi-sandbox?region=us-west-2
+encryptedkey: AQICAHgYm9QeZYTV18fUT5izoVKKB4HvuSRF24PEVG9O7FzxjwFCEYLQj3Qyzgp4k041YzMjAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMwLzSVkzS+5Aav25UAgEQgDvMQLWbM1oyifsS20woYLz1Gn4Ho1R86Fqg4F8fBetU8ZcGV+oNncXNnJv8QA7rGYsdKvdIDXPfq9pBNA==
+config:
+  aws:region: us-west-2

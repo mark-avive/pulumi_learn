@@ -1,0 +1,4 @@
+secretsprovider: awskms://alias/test-pulumi-cfndev?region=us-west-2
+encryptedkey: AQICAHiRT11ElLB31E0tmlxbtC3oxa4xZOUPnig5R+n4TmAJmgFR4IHIf9t744k9SxdUyc6JAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMWlcNXR17AwfdOqy+AgEQgDu8cEQeHwxaK2dhVaow7eJhLQZxVYwudLHXu3pBSUNL9YQLgg7eDbs2fiq953H1kKrhzyJOl7GWWXr1Eg==
+config:
+  aws:region: us-west-2
