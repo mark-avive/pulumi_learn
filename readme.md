@@ -7,7 +7,9 @@
 - [required for pulumi.StackReference, must have unique project folder names in all IAC in backend, single backend for all for stack references]
 - S3://\<bucket name\>/.pulumi/\<pulumi project folder\>/\<pulumi stack\>
   - note cannot have same \<pulumi project folder\> name anywhere in or accross IAC repos
-- Question: what is LOE to get pulumi.StackReference to take a backend parameter?
+
+## Question
+- What is LOE to get pulumi.StackReference to take a backend parameter?
 
 ## Git repo organization format, desired
 - \<git repo name1\> : \<pulumi project folder1\>
