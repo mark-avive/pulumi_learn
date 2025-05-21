@@ -19,15 +19,17 @@
 
 # Example IAC repo/folder setup
 - note: cannot reuse \<pulumi project folder\> names when all IAC code is using a single backend, as folder names in the example setup below is showing.
-- note: index numbers below [1...X] indicate different IAC resource provisioning code, not variances in provided config values and are not indicators of different stacks used to run the IAC code
+- note: index numbers below [1...X] indicate different IAC resource provisioning code, it does not indicate variances in provided config values and it does not indicate different env stacks
 - note: output names would commonly be the same in each repo type/folder purpose:
   - ex: iac_vpc1:create_vpc/  ... iac_vpcX:create_vpc/
     - all would produce output named: vpc_id
 - end result: take example case app1 needs to be setup on to eks2:
-  - different backends: all IAC code can be same and simply setup to use appropriate backends [as is the case with terraform]
-    - iac code would reference same folder and output name in the configured backend
-  - everything in same backend: then code needs be written to handle [1...X] variance as the backend folder paths (and/or output name) cannot be the same for each [1...X]
-    - after code getting correct output [1...x], may need to map/normalize variable to use in the IAC code
+  - case of different backends:
+    - all IAC code can be same and simply setup to use appropriate backends [as is the case with terraform]
+      - iac code would reference same folder and output name in the configured backend referenced
+  - case of everything in same backend:
+    - then code needs be written to handle [1...X] variance as the backend folder paths [1...X] (and/or output name) cannot be the same for each.
+      - after StackReference code getting correct output at correct folder path [1...x], then may need to map/normalize variable to use in the IAC code
 
 ### VPC IAC
 - outputs vpc info
