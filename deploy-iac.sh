@@ -33,7 +33,7 @@ while [[ $# -gt 0 ]]; do
     case "$1" in
         --target-env)
             if [[ -n "$2" && "$2" != --* ]]; then
-                TARGET_ENV="$2"
+                export TARGET_ENV="$2"
                 shift 2
             else
                 echo "Error: --target-env requires an argument"
@@ -153,12 +153,16 @@ else
 fi
 
 # Process each folder in the folder_order array
+# Store the original script directory once
+ORIGINAL_SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 for folder in "${folder_order[@]}"; do
     echo "===================================================="
     echo "Processing folder: $folder"
     
     # Change to the project directory
-    project_dir="$(dirname "$0")/$folder"
+    # Use original script directory for each project to ensure correct path
+    project_dir="$ORIGINAL_SCRIPT_DIR/$folder"
     if [[ ! -d "$project_dir" ]]; then
         echo "Error: Directory $project_dir does not exist. Skipping..."
         continue
