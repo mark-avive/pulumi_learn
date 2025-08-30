@@ -5,6 +5,8 @@ runtime:
   options:
     toolchain: pip
     virtualenv: venv
+backend:
+  url: file:///home/mark/workareas/pulumi_learn
 config:
   pulumi:tags:
     value:

@@ -7,4 +7,4 @@ from pulumi_aws import s3
 bucket = s3.BucketV2('my-bucket')
 
 # Export the name of the bucket
-pulumi.export('bucket_name', bucket.id)
+pulumi.export('bucket_name_unique', bucket.id)
